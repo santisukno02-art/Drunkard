@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0d0b16">
+  <meta name="description" content="Party Games - เกมปาร์ตี้สำหรับเล่นบนมือถือ">
+  <title>Party Games</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="brand" id="homeBtn" type="button">
+        <span class="brand-icon">🍻</span>
+        <span>PARTY GAMES</span>
+      </button>
+      <button class="sound-btn" id="soundBtn" type="button" aria-label="เปิดหรือปิดเสียง">🔊</button>
+    </header>
+
+    <main>
+      <section id="homeView" class="view active">
+        <div class="hero">
+          <p class="eyebrow">PARTY GAME HUB</p>
+          <h1>เลือกเกมแล้วเริ่มเล่น</h1>
+          <p>เปิดบนมือถือ วางกลางวง แล้วเล่นได้ทันที</p>
+        </div>
+
+        <div class="game-grid">
+          <button class="game-card" data-game="dice">
+            <span class="game-icon">🎲</span>
+            <strong>ลูกเต๋า</strong>
+            <small>เพิ่มลูกเต๋าและทอยพร้อมกัน</small>
+          </button>
+          <button class="game-card" data-game="cards">
+            <span class="game-icon">🃏</span>
+            <strong>เกมไพ่</strong>
+            <small>สุ่มไพ่ 1 ใบจากสำรับ</small>
+          </button>
+          <button class="game-card" data-game="finger">
+            <span class="game-icon">🔥</span>
+            <strong>จิ้มนิ้ว</strong>
+            <small>สุ่มเลือก 1 นิ้วจากคนในวง</small>
+          </button>
+          <button class="game-card" data-game="doraemon">
+            <span class="game-icon">🃏</span>
+            <strong>ไพ่โดเรม่อน</strong>
+            <small>การ์ดคำสั่งสำหรับวง</small>
+          </button>
+          <button class="game-card" data-game="king">
+            <span class="game-icon">👑</span>
+            <strong>King Game</strong>
+            <small>จั่วไพ่และทำตามกติกา</small>
+          </button>
+          <button class="game-card" data-game="command">
+            <span class="game-icon">🔥</span>
+            <strong>ไพ่คำสั่ง</strong>
+            <small>จั่วแล้วทำตามคำสั่ง</small>
+          </button>
+          <button class="game-card wide" data-game="race">
+            <span class="game-icon">🏃</span>
+            <strong>สัตว์วิ่งแข่ง</strong>
+            <small>เลือกสัตว์ 2–10 ตัว แล้วสุ่มระยะและสนามทุกครั้ง</small>
+          </button>
+        </div>
+      </section>
+
+      <section id="gameView" class="view">
+        <div class="game-header">
+          <button id="backBtn" class="back-btn" type="button">← กลับ</button>
+          <div>
+            <p class="eyebrow" id="gameEyebrow">GAME</p>
+            <h2 id="gameTitle">เกม</h2>
+          </div>
+        </div>
+        <div id="gameContent"></div>
+      </section>
+    </main>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
